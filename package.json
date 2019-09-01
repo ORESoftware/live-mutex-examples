@@ -27,7 +27,7 @@
   },
   "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
   "dependencies": {
-    "live-mutex": "file:../live-mutex"
+    "live-mutex": "0.2.0"
   },
   "devDependencies": {
     "@types/node": "^12.7.2",
