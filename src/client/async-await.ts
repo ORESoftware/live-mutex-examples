@@ -1,10 +1,5 @@
 'use strict';
 
-export const r2gSmokeTest = function () {
-  // r2g command line app uses this exported function
-  return true;
-};
-
 import {LMXClient} from "live-mutex";
 
 const client = new LMXClient();
@@ -43,3 +38,4 @@ run()
     console.error(err);
     process.exit(1);
   });
+
