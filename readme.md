@@ -5,12 +5,16 @@
 ## installation:
 
 ```bash
-git clone
-cd
+git clone https://github.com/ORESoftware/live-mutex-examples.git
+cd live-mutex-examples
 npm i 
 npm run tsc
 
 ```
+
+For quick reference see: run.sh
+
+## Running the examples
 
 
 Start server with:
