@@ -1,10 +1,10 @@
-
+#!/usr/bin/env bash
 
 set -e;
 
 cd `dirname "$BASH_SOURCE"`
 
-tsc -p tsconfig.json
+npm run tsc
 
 (node dist/server/cli.js ) &> /dev/null &
 
