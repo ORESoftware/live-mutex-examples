@@ -12,7 +12,7 @@ npm run tsc
 
 ```
 
-For quick reference see: run.sh
+For quick reference see: `run.sh`
 
 ## Running the examples
 
