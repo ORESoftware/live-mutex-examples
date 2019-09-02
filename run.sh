@@ -4,7 +4,7 @@ set -e;
 
 cd `dirname "$BASH_SOURCE"`
 
-npm run tsc
+"$HOME/.oresoftware/bin/run-tsc-if" "$PWD"
 
 (node dist/server/cli.js) &> /dev/null &
 export pid_to_kill="$!"
