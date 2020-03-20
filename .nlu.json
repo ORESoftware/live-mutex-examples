@@ -1,0 +1,20 @@
+{
+  "linkToItself": true,
+  "alwaysReinstall": false,
+  "alwaysRelink": false,
+  "searchRoots": [
+    "$HOME/codes"
+  ],
+  "ignore": [
+    "/node_modules/",
+    "/.git/",
+    "suman-old",
+    "suman-mono/suman"
+  ],
+  "comments": [
+    "put any comment you want here"
+  ],
+  "list": [
+    "live-mutex"
+  ]
+}
