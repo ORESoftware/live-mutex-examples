@@ -29,6 +29,16 @@ const main = async () => {
 
 };
 
-main().catch(error => {
-  console.error(error);
-});
+let successCount = 0;
+
+for(let i = 0 ; i < 5000; i++){
+  main()
+    .then(v => {
+      successCount++;
+      console.log({successCount});
+    })
+    .catch(error => {
+    console.error('WOW:', error);
+  });
+}
+
