@@ -8,6 +8,7 @@ c.emitter.on('warning', w => console.error('client warning', w));
 
 // This function will be called by multiple requests
 // I've just simplified to show the issue
+
 const main = async () => {
   // Connect to mutex broker
   await Promise.all([b.ensure(), c.ensure()]);
@@ -25,7 +26,6 @@ const main = async () => {
   const released = await c.releaseLock('registered', {id: lock.id});
 
   console.log('lock released:', released);
-
 
 };
 
