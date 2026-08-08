@@ -1,36 +1,42 @@
 {
-  "name": "typescript-library-skeleton",
-  "version": "0.0.1001",
-  "description": "Semver-oriented TypeScript library skeleton.",
-  "main": "dist/main.js",
-  "types": "dist/main.d.ts",
-  "typings": "dist/main.d.ts",
+  "name": "live-mutex-examples",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Runnable TypeScript examples and contract tests for live-mutex.",
+  "type": "commonjs",
+  "engines": {
+    "node": ">=22"
+  },
   "scripts": {
-    "test": "echo 'npm test is currently a no-op'",
-    "postinstall": "./assets/postinstall.sh",
-    "tsc": "tsc"
+    "clean": "node -e \"require('node:fs').rmSync('dist', { recursive: true, force: true })\"",
+    "build": "npm run clean && tsc -p tsconfig.json",
+    "test": "npm run build && node --test dist/test/live-mutex.test.js",
+    "example:async": "npm run build && node dist/examples/async-await.js",
+    "example:promises": "npm run build && node dist/examples/promises.js",
+    "example:ttl": "npm run build && node dist/examples/ttl-timeout.js"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/ORESoftware/typescript-library-skeleton.git"
+    "url": "git+https://github.com/ORESoftware/live-mutex-examples.git"
   },
   "keywords": [
+    "live-mutex",
+    "mutex",
+    "fencing-token",
     "typescript",
-    "library",
-    "skeleton",
-    "scaffold"
+    "examples"
   ],
-  "author": "YOUR NAME HERE",
-  "license": "SEE LICENSE IN license.md",
+  "author": "ORESoftware",
+  "license": "MIT",
   "bugs": {
-    "url": "https://github.com/ORESoftware/typescript-library-skeleton/issues"
+    "url": "https://github.com/ORESoftware/live-mutex-examples/issues"
   },
-  "homepage": "https://github.com/ORESoftware/typescript-library-skeleton#readme",
+  "homepage": "https://github.com/ORESoftware/live-mutex-examples#readme",
   "dependencies": {
-    "live-mutex": "0.2.0"
+    "live-mutex": "0.2.27"
   },
   "devDependencies": {
-    "@types/node": "^12.7.2",
-    "typescript": "^3.5.3"
+    "@types/node": "^22.0.0",
+    "typescript": "^5.9.3"
   }
 }
